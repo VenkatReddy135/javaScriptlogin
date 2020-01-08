@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORM</title>
+    </head>
+    <body>  
+        <script>
+            function load(){
+    var passWord=document.getElementById("num1").value;
+    var cpassWord=document.getElementById("num2").value;
+    if(passWord==null || passWord==""){
+        alert("password cant be blank");
+        return false;
+    }
+
+            if(passWord.length<6){
+               alert("password should have 6 characters");
+                return false;
+            }
+       
+            if(passWord.length>6 && cpassWord==""){
+            alert("enter cpassword")
+            return false;
+        }
+        if(passWord!==cpassWord){
+            alert("password and c password should be equal");
+            return false;
+        }else{
+            return true;
+        }
+    
+        }
+    
+            </script>
+        <div class="container">
+            <form method="POST" onsubmit="return load()" action="index2.html">
+               <h1> password</h1>
+               <input type="password" id="num1"><br>
+                <h1>cpassword</h1>
+                <input type="password" id="num2"><br><br>
+                <h1>Gender</h1>
+                <input type="radio"><span>MALE</span>
+                <input type="radio"><span>FEMALE</span>
+                <input type="submit" value="check"><br>
+            </form>
+        </div>
+        
+
+    </body>
+</html>
